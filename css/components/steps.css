@@ -1,0 +1,95 @@
+.steps__content{
+    --row-height: 25rem;
+    --card-padding: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, var(--row-height));
+    gap: 0.5rem;
+    grid-template-areas:
+    "steps-phone steps-phone steps-1"
+    "steps-phone steps-phone steps-gradient-1"
+    "steps-2 steps-gradient-2 steps-3"
+    ;
+
+    & .steps__card{
+        background: var(--card-bg-color);
+        border-radius: var(--rounded-base);
+        padding: var(--card-padding);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        & .steps__card-number{
+            font-size: 8rem;
+            color: var(--accent-color-2);
+        }
+        & .steps__card-subheading{
+            font-size: 2rem;
+            color: var(--font-card-color);
+            align-self: flex-end;
+        }
+    }
+    #steps-phone{
+        grid-area: steps-phone;
+        background: url("../../img/images/other-bg.png") center/cover no-repeat;
+        padding: 0;
+        justify-content: flex-end;
+
+        & .steps__img{
+            width: 40%;
+            margin-left: 4rem;
+        }
+    }
+    #steps-1{
+        grid-area: steps-1;
+    }
+    #steps-gradient-1{
+        grid-area: steps-gradient-1;
+        background: linear-gradient(46.40deg, rgb(11, 182, 255) -2.978%,rgb(126, 98, 179) 51.58%,rgb(148, 82, 165) 52.7%,rgb(255, 5, 95) 100%);
+    }
+    #steps-2{
+        grid-area: steps-2;
+    }
+    #steps-gradient-2{
+        grid-area: steps-gradient-2;
+        background: linear-gradient(223.79deg, rgb(11, 182, 255) 5.175%,rgb(248, 150, 79) 59.996%,rgb(255, 5, 95) 100%);
+    }
+    #steps-3{
+        grid-area: steps-3;
+    }
+}
+
+@media (max-width: 580px){
+    .steps__content{
+        --row-height: 15rem;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, var(--row-height));
+        gap: 0.5rem;
+        grid-template-areas:
+        "steps-phone"
+        "steps-phone"
+        "steps-phone"
+        "steps-1"
+        "steps-2"
+        "steps-3"
+        "steps-gradient-1"
+        ;
+
+        #steps-phone{
+            background: linear-gradient(223.79deg, rgb(11, 182, 255) 5.175%,rgb(248, 150, 79) 59.996%,rgb(255, 5, 95) 100%);
+    
+            & .steps__img{
+                width: 70%;
+                margin: 0 auto;
+            }
+        }
+    }
+    #steps-gradient-1{
+        height: var(--row-height);
+    }
+    #steps-gradient-2{
+        display: none;
+    }
+}

@@ -1,0 +1,14 @@
+.btn{
+    background: var(--accent-color-2);
+    border-radius: var(--rounded-base);
+    border: none;
+    color: var(--white-color);
+    padding: var(--p-2);
+
+    &:hover{
+        opacity: 0.75;
+    }
+    &:active{
+        background: var(--font-site-color);
+    }
+}

@@ -1,0 +1,32 @@
+.section__title-container{
+    /* position: absolute;
+    top: 0;
+    right: 5%; */
+    /* width: 100%; */
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    & .section-title{
+        font-family: var(--additional-font-family);
+        display: flex;
+        position: sticky;
+        top: 50px;
+        height: fit-content;
+        gap: 0.5rem;
+    
+        & .section-title__number{
+            font-size: var(--text-xxl);
+        }
+        & .section-title__text{
+            text-orientation: sideways;
+            writing-mode: vertical-lr;
+        }
+    }
+}
+@media (max-width: 580px){
+    .section__title-container{
+        display: none;
+    }
+}

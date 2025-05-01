@@ -1,0 +1,132 @@
+.portfolio{
+
+    & .portfolio__content{
+        position: relative;
+        z-index: 1;
+    }
+    & .portfolio__radio{
+        position: fixed;
+        left: -100%;
+        visibility: hidden;
+    }
+    & .portfolio__tabs{
+        display: grid;
+        background: #000;
+        border-radius: var(--rounded-base);
+        grid-template-columns: repeat(3, 1fr);
+        color: var(--white-color);
+        width: 100%;
+
+        & .portfolio__tab{
+            display: block;
+            padding: var(--p-2);
+            text-align: center;
+            font-weight: bold;
+            border-radius: var(--rounded-base);
+            background: #000;
+            position: relative;
+            overflow: hidden;
+
+            & span{
+                position: relative;
+                z-index: 1;
+            }
+
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background: var(--main-gradient);
+                transition: 0.5s;
+            }
+        }
+    }
+    & .portfolio__tabs-content{
+        position: relative;
+        height: 37.5rem;
+        overflow: hidden;
+        margin-top: 5rem;
+
+        --tab-offset: 20%;
+
+        & .portfolio__tab-img{
+            position: absolute;
+            width: calc(100% - var(--tab-offset));
+            height: 100%;
+            transition: 0.5s;
+            object-fit: cover;
+            top: 0;
+
+            &:nth-child(1){
+                left: 0;
+                box-shadow: 0 0 10px #0000006a;
+            }
+            &:nth-child(2){
+                left: calc(100% - var(--tab-offset));
+                filter: brightness(0.4);
+            }
+            &:nth-child(3){
+                left: calc(200% - var(--tab-offset));
+                filter: brightness(0.4);
+            }
+        }
+    }
+
+    & #portfolio-project-1:checked ~ .portfolio__tabs .portfolio__tab:nth-child(1)::before{
+        width: 100%;
+    }
+    & #portfolio-project-2:checked ~ .portfolio__tabs .portfolio__tab:nth-child(2)::before{
+        width: 100%;
+    }
+    & #portfolio-project-3:checked ~ .portfolio__tabs .portfolio__tab:nth-child(3)::before{
+        width: 100%;
+    }
+    & #portfolio-project-2:checked ~ .portfolio__tabs-content{
+        & .portfolio__tab-img{
+            &:nth-child(1){
+                left: calc(-100% + var(--tab-offset));
+                filter: brightness(0.4);
+            }
+            &:nth-child(2){
+                left: var(--tab-offset);
+                filter: brightness(1);
+            }
+            &:nth-child(3){
+                left: calc(100% - var(--tab-offset));
+                filter: brightness(0.4);
+            }
+        }
+    }
+    & #portfolio-project-3:checked ~ .portfolio__tabs-content{
+        & .portfolio__tab-img{
+            &:nth-child(1){
+                left: -200%;
+                filter: brightness(0.4);
+            }
+            &:nth-child(2){
+                left: calc(0% - var(--tab-offset));
+                filter: brightness(0.4);
+            }
+            &:nth-child(3){
+                left: var(--tab-offset);
+                filter: brightness(1);
+            }
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    .portfolio{
+        .portfolio__tabs{
+            background: none;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 80px);
+            color: var(--white-color);
+            font-size: var(--text-lg);
+            gap: 0.5rem;
+        }
+    }
+}

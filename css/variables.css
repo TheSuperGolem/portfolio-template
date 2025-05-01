@@ -1,0 +1,50 @@
+:root{
+    /* Переменные цветов */
+    --bg-color: white;
+    --card-bg-color: #EAEAEA;
+    --font-card-color: #343434;
+    --font-site-color: #000000;
+    --white-color: white;
+    --main-gradient: radial-gradient(30.58% 197.36% at 30.23% 113.13%, #FF542F 0%, rgba(255, 84, 47, 0) 100%),
+    linear-gradient(272.09deg, #FF055F -2.21%, #0BB6FF 108.82%);
+    --nav-gradient: linear-gradient(179.35deg, rgb(11, 182, 255) 48.043%,rgb(255, 4, 95) 50.006%);
+    --basic-shadow: 0px 20px 30px rgba(0, 0, 0, 0.07);
+    --accent-color-1:#FF055F;
+    --accent-color-2:#0BB6FF;
+
+    /* Переменные размеров текста */
+    --text-xxl: 5rem;
+    --text-xl: 3rem;
+    --text-lg: 2rem;
+    --text-md: 1.5rem;
+    --text-base: 1rem;
+    --base-font: 16px;
+    --base-font-family: "Montserrat", sans-serif;
+    --additional-font-family: "ProtoSans", sans-serif;
+
+    /* Borders */
+    --rounded-base: 1.25rem;
+    --rounded-xs: 5px;
+    --rounded-full: 50%;
+
+    /* Padding */
+    --p-1: 2rem;
+    --p-2: 1rem;
+    --p-3: 0.5rem;
+
+    /* Containers */
+    --container: 81.25rem;
+    --container-nav: 106.25rem;
+
+    /* z-Index */
+    --z-max: 1000;
+    --z-100: 100;
+    --z-1: 1;
+    --z-min: -1;
+}
+
+@media (max-width: 768px){
+    :root{
+        --base-font: 14px;
+    }
+}

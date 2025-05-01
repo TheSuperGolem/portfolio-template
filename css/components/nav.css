@@ -1,0 +1,132 @@
+.nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 6.25rem;
+
+    & .nav__container{
+        max-width: var(--container-nav);
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        background: var(--bg-color);
+        align-items: center;
+        position: relative;
+        padding: 1.5rem;
+        z-index: var(--z-max);
+
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--nav-gradient);
+        }
+    }
+    & .nav__logo-img{
+        max-width: 10rem;
+    }
+    & .nav__request-btn{
+        display: block;
+        border: 3px solid var(--accent-color-1);
+        border-radius: 5px;
+        min-width: 12.75rem;
+        padding: 10px 1rem;
+        padding-left: 2.75rem;
+        height: 41px;
+        background: url("../../img/icons/form-btn--open.svg") left+1rem center / 22px no-repeat;
+
+        &::before{
+            content: "Submit a request";
+            color: var(--accent-color-1);
+            display: block;
+            text-align: center;
+        }
+    }
+    & #nav__request:checked{
+        & ~ .nav__container .nav__request-btn{
+            background-image: url("../../img/icons/form-btn--close.svg");
+
+            &::before{
+                content: "Close";
+            }
+        }
+        & ~ .nav__request-popup{
+            transform: scaleY(1);
+            transition: transform 0.5s 0s;
+
+            & .nav__request-form{
+                opacity: 1;
+                transition: opacity 0.5s 0.5s;
+            }
+        }
+    }
+    & .nav__request{
+        visibility: hidden;
+        position: absolute;
+        z-index: var(--z-min);
+    }
+    & .nav__request-popup{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(20px);
+        background: rgba(26, 26, 26, 0.71);
+        z-index: var(--z-100);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.5s 0.5s;
+        transform: scaleY(0);
+        transform-origin: top;
+
+        & .nav__request-form{
+            display: flex;
+            flex-direction: column;
+            max-width: 47rem;
+            width: 100%;
+            background: var(--bg-color);
+            padding: 3.75rem;
+            border-radius: var(--rounded-base);
+            opacity: 0;
+            transition: opacity 0.5s 0s;
+        }
+        & .nav__request-title{
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        & .nav__request-input{
+            margin-bottom: 3rem;
+        }
+        & .nav__request-submit{
+            max-width: 18.75rem;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (max-width: 425px){
+    .nav{
+        & .nav__request-btn{
+            min-width: fit-content;
+
+            &::before{
+                content: "";
+            }
+        }
+        & #nav__request:checked{
+            & ~ .nav__container .nav__request-btn{
+                &::before{
+                    content: "";
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <nav class="nav">
+        <input type="checkbox" class="nav__request" id="nav__request">
+        <div class="nav__container">
+            <div class="nav__left">
+                <a href="#" class="nav__logo"><img src="img/icons/logo.svg" alt="designknights" class="nav__logo-img"></a>
+            </div>
+            <div class="nav__right">
+                <label for="nav__request" class="nav__request-btn"></label>
+            </div>
+        </div>
+        <div class="nav__request-popup">
+            <form action="" class="nav__request-form">
+                <h3 class="nav__request-title">Submit a request</h3>
+                <input type="text" class="nav__request-input input" placeholder="Name">
+                <input type="email" class="nav__request-input input" placeholder="Email">
+                <button class="nav__request-submit btn">Submit</button>
+            </form>
+        </div>
+    </nav>
+    <nav class="menu">
+        <div class="menu__container">
+            <h3 class="menu__title">Menu</h3>
+            <div class="menu__items">
+                <a class="menu__item" href="#header">
+                    <span class="menu__item-front"><img src="img/icons/menu_item-front.svg" alt="" class="menu__img"></span>
+                    <span class="menu__item-back"><img src="img/icons/menu_item-back0.svg" alt="" class="menu__img"></span>
+                </a>
+                <a class="menu__item" href="#about">
+                    <span class="menu__item-front"><img src="img/icons/menu_item-front.svg" alt="" class="menu__img"></span>
+                    <span class="menu__item-back"><img src="img/icons/menu_item-back1.svg" alt="" class="menu__img"></span>
+                </a>
+                <a class="menu__item" href="#portfolio">
+                    <span class="menu__item-front"><img src="img/icons/menu_item-front.svg" alt="" class="menu__img"></span>
+                    <span class="menu__item-back"><img src="img/icons/menu_item-back2.svg" alt="" class="menu__img"></span>
+                </a>
+                <a class="menu__item" href="#steps">
+                    <span class="menu__item-front"><img src="img/icons/menu_item-front.svg" alt="" class="menu__img"></span>
+                    <span class="menu__item-back"><img src="img/icons/menu_item-back3.svg" alt="" class="menu__img"></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <header class="header" id="header">
+        <div class="header__left">
+            <h1 class="header__title">Web design, layout & development</h1>
+            <a href="#about" class="header__btn"></a>
+        </div>
+        <div class="header__right">
+            <img src="img/images/header-pannel.png" alt="header__panel" class="header__panel">
+            <img src="img/images/header-knight.png" alt="header__knight" class="header__knight">
+        </div>
+    </header>
+    <main class="main">
+        <section class="about section" id="about">            
+            <div class="container">
+                <div class="about__content">
+                    <div class="about__card" id="about-layout">
+                        <img src="img/images/about-card1.png" alt="" class="about__card-img">
+                        <h2 class="about__card-title">Layouts</h2>
+                        <p class="about__card-text">Creation and layout of various layouts. Customizable and flexible solutions. Possibility of customization for your company's changes.</p>
+                    </div>
+                    <div class="about__card" id="about-icons">
+                        <img src="img/images/about-card2.png" alt="" class="about__card-img">
+                        <h2 class="about__card-title">Iconography</h2>
+                        <p class="about__card-text">Create icons or redesign existing icons</p>
+                    </div>
+                    <div class="about__card" id="about-forms">
+                        <img src="img/images/about-card3.png" alt="" class="about__card-img">
+                        <h2 class="about__card-title">Forms</h2>
+                    </div>
+                    <div class="about__card" id="about-picture1"></div>
+                    <div class="about__card" id="about-circle">
+                        <div class="about__card-ring"></div>
+                        <img src="img/images/about-card5-white-circle.svg" alt="" class="about__card-circle">
+                    </div>
+                    <div class="about__card" id="about-process">
+                        <img src="img/images/about-card6.png" alt="" class="about__card-img">
+                        <p class="about__card-text">Provide input as you work through the process. Keep track of the development status</p>
+                        <h2 class="about__card-title">Full development cycle</h2>
+                    </div>
+                    <div class="about__card" id="about-label">
+                        <h2 class="about__card-title">We do it with our hearts!</h2>
+                    </div>
+                    <div class="about__card" id="about-picture2"></div>
+                </div>
+            </div>
+            <div class="section__title-container">
+                <div class="section-title">
+                    <h3 class="section-title__number">1</h3>
+                    <h2 class="section-title__text">About</h2>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio section" id="portfolio">
+            <div class="container">
+                <div class="portfolio__content">
+                    <input type="radio" checked class="portfolio__radio" name="portfolio-project" id="portfolio-project-1">
+                    <input type="radio" class="portfolio__radio" name="portfolio-project" id="portfolio-project-2">
+                    <input type="radio" class="portfolio__radio" name="portfolio-project" id="portfolio-project-3">
+                    <div class="portfolio__tabs">
+                        <label for="portfolio-project-1" class="portfolio__tab"><span>Project 1</span></label>
+                        <label for="portfolio-project-2" class="portfolio__tab"><span>Project 2</span></label>
+                        <label for="portfolio-project-3" class="portfolio__tab"><span>Project 3</span></label>
+                    </div>
+                    <div class="portfolio__tabs-content">
+                        <img src="img/images/portfolio1.png" alt="portfolio1" class="portfolio__tab-img">
+                        <img src="img/images/portfolio2.png" alt="portfolio2" class="portfolio__tab-img">
+                        <img src="img/images/portfolio3.png" alt="portfolio3" class="portfolio__tab-img">
+                    </div>
+                </div>
+            </div>
+            <div class="section__title-container">
+                <div class="section-title">
+                    <h3 class="section-title__number">2</h3>
+                    <h2 class="section-title__text">Portfolio</h2>
+                </div>
+            </div>
+        </section>
+        <section class="steps section" id="steps">
+            <div class="container">
+                <div class="steps__content">
+                    <div class="steps__card" id="steps-phone">
+                        <img src="img/images/other-phone.png" alt="phone" class="steps__img">
+                    </div>
+                    <div class="steps__card" id="steps-1">
+                        <h2 class="steps__card-number">1</h2>
+                        <h3 class="steps__card-subheading">Order</h3>
+                    </div>
+                    <div class="steps__card" id="steps-gradient-1"></div>
+                    <div class="steps__card" id="steps-2">
+                        <h2 class="steps__card-number">2</h2>
+                        <h3 class="steps__card-subheading">Pay</h3>
+                    </div>
+                    <div class="steps__card" id="steps-gradient-2"></div>
+                    <div class="steps__card" id="steps-3">
+                        <h2 class="steps__card-number">3</h2>
+                        <h3 class="steps__card-subheading">Receive</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="section__title-container">
+                <div class="section-title">
+                    <h3 class="section-title__number">3</h3>
+                    <h2 class="section-title__text">Websites are easy</h2>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <h3 class="footer__title">Contact Me</h3>
+                <p class="footer__text">email: abc@gmail.com</p>
+                <p class="footer__text">phone number: 8-232-31-32-231</p>
+                <h3 class="footer__title">More of our projects</h3>
+                <a href="#" class="footer__link">mars site</a>
+                <a href="#" class="footer__link">cinema site</a>
+                <a href="#" class="footer__link">porsche site</a>
+                <a href="#" class="footer__link">digital agency site</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

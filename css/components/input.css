@@ -1,0 +1,14 @@
+.input{
+    background: var(--card-bg-color);
+    padding: var(--p-2);
+    border-radius: var(--rounded-base);
+    border: 1px solid transparent;
+    
+    &::placeholder{
+        color: var(--font-card-color);
+        opacity: 0.6;
+    }
+    &:focus{
+        border-color: var(--accent-color-2);
+    }
+}
